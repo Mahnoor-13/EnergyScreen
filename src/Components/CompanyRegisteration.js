@@ -22,7 +22,7 @@ function App() {
                     </li>
                     <li>
                       <button type="button" class="btn">
-                        Freelancer Account
+                        Freelancer Accountt
                       </button>
                     </li>
                   </ul>
@@ -31,6 +31,12 @@ function App() {
             </div>
           </div>
         </div>
+
+
+
+
+
+
 
         <div class="sign_box">
           <div class="sign_box_content">
