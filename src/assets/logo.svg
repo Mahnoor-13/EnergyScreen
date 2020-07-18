@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="179" height="39" viewBox="0 0 179 39">
+    <g fill="#4D4D4D" fill-rule="evenodd" font-size="32">
+        <text font-family="SFUIText-Heavy, SF UI Text" font-weight="600" transform="translate(.5 .5)">
+            <tspan x=".242" y="30">E</tspan> <tspan x="20.586" y="30" font-family="SFUIText-Light, SF UI Text" font-weight="300">nergy</tspan>
+        </text>
+        <text font-family="SFUIText-Bold, SF UI Text" font-weight="bold" transform="translate(.5 .5)">
+            <tspan x="105.359" y="30">Gigs</tspan>
+        </text>
+    </g>
+</svg>
