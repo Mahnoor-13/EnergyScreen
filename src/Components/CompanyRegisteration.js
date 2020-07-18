@@ -13,7 +13,7 @@ function App() {
                     <img src={require("../assets/logo-white.png")} alt="logo" />
                   </a>
                 </div>
-              </div> 
+              </div>
               <div class="col-md-8">
                 <div class="company_sign_nav">
                   <ul>
