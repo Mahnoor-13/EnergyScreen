@@ -10,7 +10,7 @@ function App() {
               <div class="col-md-4">
                 <div class="company_sign_logo">
                   <a href="#">
-                    <img src={require("../assets/logo-white.png")} alt="logo" />
+                    <img src={require("../../assets/logo-white.png")} alt="logo" />
                   </a>
                 </div>
               </div>
@@ -48,7 +48,7 @@ function App() {
                 <div class="form-group has_left_icon">
                   <span class="input_left_icon">
                     <img
-                      src={require("../assets/icons/company.svg")}
+                      src={require("../../assets/icons/company.svg")}
                       alt="icon"
                     />
                   </span>
@@ -60,7 +60,7 @@ function App() {
                 </div>
                 <div class="form-group has_left_icon">
                   <span class="input_left_icon">
-                    <img src={require("../assets/icons/id.svg")} alt="icon" />
+                    <img src={require("../../assets/icons/id.svg")} alt="icon" />
                   </span>
                   <input
                     type="email"
@@ -70,7 +70,7 @@ function App() {
                 </div>
                 <div class="form-group has_left_icon">
                   <span class="input_left_icon">
-                    <img src={require("../assets/icons/lock.svg")} alt="icon" />
+                    <img src={require("../../assets/icons/lock.svg")} alt="icon" />
                   </span>
                   <input
                     type="password"
@@ -80,7 +80,7 @@ function App() {
                 </div>
                 <div class="form-group has_left_icon">
                   <span class="input_left_icon">
-                    <img src={require("../assets/icons/lock.svg")} alt="icon" />
+                    <img src={require("../../assets/icons/lock.svg")} alt="icon" />
                   </span>
                   <input
                     type="password"
