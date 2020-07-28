@@ -1,0 +1,156 @@
+
+@media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
+
+.eg_nav ul li:first-child {
+    padding-right: 10px;
+}
+.eg_nav ul li {
+    padding: 10px 6px;
+}
+.eg_header_notifications ul li {
+    padding: 10px 10px;
+}
+
+
+
+
+}
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+
+
+.EG_desktop_header_area{
+	padding: 0px 15px;
+}
+.EG_desktop_header_area {
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+.eg_witget_area{
+    padding-top: 86px;
+}
+.eg_header_notifications {
+    padding-top: 0px;
+    white-space: nowrap;
+}
+.mobile_logo{
+    display: block;
+    padding-top: 10px;
+}
+.eg_desktop_search{
+    display: none;
+}
+.EG_header_area .col-5, .EG_header_area .col-2{
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.eg_header_notifications ul li a img{
+    max-width: 23px;
+}
+.eg_header_notifications ul li a span {
+    right: -7px;
+    bottom: -7px;
+}
+.eg_nav{
+    position: fixed;
+    top: 0px;
+    left: -230px;
+    width: 200px;
+    height: 100%;
+    background: #fff;
+    border-right: solid 1px #c9c9c9;
+    z-index: 100;
+    padding-top: 80px;
+    display: none;
+    transition: 0.4s;
+}
+.eg_nav ul li {
+    display: block;
+    padding: 10px 20px;
+}
+.eg_nav .eg_desktop_search{
+    display: block;
+}
+
+.eg_mobile_nav{
+	display: block;
+}
+.open_mobile_nav .eg_nav{
+    left: 0;
+    transition: 0.4s;
+}
+.mobile_nav_toggle{
+	display: inline-block;
+}
+.eg_desktop_search input {
+    padding: 5px 15px;
+    background: url('../../assets/icons/search.svg') left 10px center no-repeat;
+    background-size: 15px;
+    height: 40px;
+    border-radius: 2px;
+    border: solid 1px #c9c9c9;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #4d4d4d;
+    padding-left: 30px;
+}
+.eg_desktop_search input:focus{
+    border: solid 1px #c9c9c9;
+}
+.eg_nav ul li:first-child {
+    padding: 0px 15px;
+}
+.eg_desktop_search {
+    border: none;
+}
+.mobile_none{
+    display: none;
+}
+.eg_nav_tab .tab-pane {
+    padding: 0;
+}
+.eg_information_area .title_1 {
+    border: none !important;
+    padding-bottom: 0px !important;
+}
+.eg_loininfo_area, .eg_notifications_area{
+    padding: 15px;
+}
+.eg_notifications_area .info_list ul {
+    padding-top: 8px;
+}
+.eg_notifications_area .info_list ul li {
+    margin-top: 16px;
+}
+.plans_checkbox_area{
+    padding: 0px 15px;
+}
+.plans_box h4 {
+    font-size: 20px;
+    line-height: 27px;
+}
+.billing_area {
+    padding: 20px 15px 0px;
+}
+.billing_form_controlls .col-md-4 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.save_btn {
+    display: none;
+}
+.has_right_btn {
+    padding-right: 0px;
+}
+.desktop_tab_none{
+	display: inline-block !important;
+}
+
+
+}
