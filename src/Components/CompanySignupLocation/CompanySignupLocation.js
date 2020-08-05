@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 
 function App({ ...props }) {
-  console.log(props)
+  const [_props] = useState(props.location.state);
+  const [comapnyAddress, setCompanyAddress]=useState(props.location.state);
+  const [city, setCity]=useState(props.location.state);
+  const [addressSecond, setAddressSecond]=useState(props.location.state);
+  const [zip, setZip]=useState(props.location.state);
+
   return (
     <div className="App">
       <section class="signUpIn_witget_area">
@@ -21,6 +26,7 @@ function App({ ...props }) {
                     type="email"
                     class="form-control"
                     placeholder="Company Address"
+                    onChange={(e) => setCompanyAddress(e.target.value)}
                   />
                 </div>
                 <div class="form-group">
@@ -28,6 +34,7 @@ function App({ ...props }) {
                     type="text"
                     class="form-control"
                     placeholder="Address (Second line)"
+                    onChange={(e) => setAddressSecond(e.target.value)}
                   />
                 </div>
                 <div class="row">
@@ -37,6 +44,7 @@ function App({ ...props }) {
                         type="text"
                         class="form-control"
                         placeholder="City"
+                        onChange={(e) => setCity(e.target.value)}
                       />
                     </div>
                   </div>
@@ -46,6 +54,7 @@ function App({ ...props }) {
                         type="text"
                         class="form-control"
                         placeholder="Zip Code"
+                        onChange={(e) => setZip(e.target.value)}
                       />
                     </div>
                   </div>
@@ -53,7 +62,15 @@ function App({ ...props }) {
 
                 <div class="next_btn_area">
                   <button
-                    onClick={() => props.history.push("signupcompanysize")}
+                    onClick={() =>
+                      props.history.push("signupcompanysize", {
+                        details: _props.details,
+                        comapnyAddress: comapnyAddress,
+                        addressSecond: addressSecond,
+                        zip: zip,
+                        city: city,
+                      })
+                    }
                     class="btn next_btn"
                   >
                     NEXT

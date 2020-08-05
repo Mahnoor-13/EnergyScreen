@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+function App({ ...props }) {
+  const [_props] = useState(props.location.state);
 
-function App({...props}) {
   return (
     <div className="App">
-      <section class="signUpIn_witget_area">
-        <div class="container">
-          <div class="signUpIn_title">
+      <section className="signUpIn_witget_area">
+        <div className="container">
+          <div className="signUpIn_title">
             <h2>Company Industry</h2>
             <p>
               Can you tell us a bit more about your industry?
@@ -13,153 +15,169 @@ function App({...props}) {
               Pick the tag that represent your company
             </p>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="indursty_services_area">
-                <div class="row">
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="indursty_services_area">
+                <div className="row">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/mine.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Coal</span>
+                        <span className="checkmark_txt">Coal</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" checked="checked" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/power.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Solar</span>
+                        <span className="checkmark_txt">Solar</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/fossil-fuel.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Oil & Gas</span>
+                        <span className="checkmark_txt">Oil & Gas</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/water.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Water</span>
+                        <span className="checkmark_txt">Water</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/sustainability.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Nuclear</span>
+                        <span className="checkmark_txt">Nuclear</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/pole.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Transmission</span>
+                        <span className="checkmark_txt">Transmission</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" checked="checked" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/wagon.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Transport</span>
+                        <span className="checkmark_txt">Transport</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/storage.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Storage</span>
+                        <span className="checkmark_txt">Storage</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" checked="checked" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/geothermal.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Geothermal</span>
+                        <span className="checkmark_txt">Geothermal</span>
                       </label>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="indursty_services_checkbox">
-                      <label class="services_checkbox_label">
+                  <div className="col">
+                    <div className="indursty_services_checkbox">
+                      <label className="services_checkbox_label">
                         <input type="checkbox" />
-                        <span class="checkmark">
+                        <span className="checkmark">
                           <img
                             src={require("../../assets/icons/wind-turbine.svg")}
                             alt="img"
                           />
                         </span>
-                        <span class="checkmark_txt">Wind</span>
+                        <span className="checkmark_txt">Wind</span>
                       </label>
                     </div>
                   </div>
                 </div>
-                <div class="next_btn_area">
-                  <button onClick={()=>props.history.push("signuponlinepresence")} class="btn next_btn">NEXT</button>
+                <div className="next_btn_area">
+                  <button
+                    onClick={
+                      // () => add()
+                      () =>
+                        props.history.push("signuponlinepresence", {
+                          details: _props.details,
+                          comapnyAddress: _props.comapnyAddress,
+                          addressSecond: _props.addressSecond,
+                          zip: _props.zip,
+                          city: _props.city,
+                          conpanySize: _props.companySize,
+                        })
+                    }
+                    className="btn next_btn"
+                  >
+                    NEXT
+                  </button>
                 </div>
               </div>
             </div>
