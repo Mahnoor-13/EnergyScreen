@@ -33,6 +33,7 @@ function App({ ...props }) {
                       zip: _props.zip,
                       city: _props.city,
                       conpanySize: _props.companySize,
+                      industry: _props.industry,
                       companyWebsite: companyWebsite
                     })}
                   >
@@ -40,7 +41,7 @@ function App({ ...props }) {
                   </button>
                 </div>
                 <div class="skip_btn_area">
-                  <button class="btn skip_btn">Skip</button>
+                  <button onClick={()=>props.history.goBack()} class="btn skip_btn">Skip</button>
                 </div>
               </div>
             </div>

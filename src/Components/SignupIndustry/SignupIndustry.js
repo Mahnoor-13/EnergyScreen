@@ -1,7 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 function App({ ...props }) {
   const [_props] = useState(props.location.state);
+  const [arr, setArr] = useState([]);
+
+  const manage = (e, value) => {
+    if (e.target.checked) {
+      arr.push(value);
+      setArr(arr);
+    } else {
+      var index = arr.indexOf(value);
+      if (index >= 0) {
+        arr.splice(index, 1);
+        setArr(arr);
+      }
+    }
+  };
 
   return (
     <div className="App">
@@ -22,7 +36,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "Coal")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/mine.svg")}
@@ -36,7 +53,11 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" checked="checked" />
+                        <input
+                          type="checkbox"
+                          // checked="checked"
+                          onClick={(e) => manage(e, "power")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/power.svg")}
@@ -50,7 +71,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "oil&gas")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/fossil-fuel.svg")}
@@ -64,7 +88,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "water")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/water.svg")}
@@ -78,7 +105,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "nuclear")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/sustainability.svg")}
@@ -92,7 +122,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "transmission")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/pole.svg")}
@@ -106,7 +139,11 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" checked="checked" />
+                        <input
+                          type="checkbox"
+                          // checked="checked"
+                          onClick={(e) => manage(e, "transport")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/wagon.svg")}
@@ -120,7 +157,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "storage")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/storage.svg")}
@@ -134,7 +174,11 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" checked="checked" />
+                        <input
+                          type="checkbox"
+                          // checked="checked"
+                          onClick={(e) => manage(e, "geothermal")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/geothermal.svg")}
@@ -148,7 +192,10 @@ function App({ ...props }) {
                   <div className="col">
                     <div className="indursty_services_checkbox">
                       <label className="services_checkbox_label">
-                        <input type="checkbox" />
+                        <input
+                          type="checkbox"
+                          onClick={(e) => manage(e, "wind")}
+                        />
                         <span className="checkmark">
                           <img
                             src={require("../../assets/icons/wind-turbine.svg")}
@@ -172,6 +219,7 @@ function App({ ...props }) {
                           zip: _props.zip,
                           city: _props.city,
                           conpanySize: _props.companySize,
+                          industry:JSON.stringify(arr)
                         })
                     }
                     className="btn next_btn"

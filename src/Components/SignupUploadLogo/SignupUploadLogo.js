@@ -1,13 +1,23 @@
 import React, { useState } from "react";
-import "../../App.css"
+import "../../App.css";
+import Loader from "react-loader-spinner";
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+import "react-notifications/lib/notifications.css";
+
 function App({ ...props }) {
   const [_props] = useState(props.location.state);
   const [uploadLogo, setUploadLogo] = useState("");
+  const [creatingUser, setCreatingUser] = useState(false);
 
-  const add = () => {
+  const createUser = () => {
     let _subProps = _props;
     _subProps.uploadLogo = uploadLogo;
-    fetch("http://localhost:1994/companyusers", {
+    setCreatingUser(true);
+    fetch("http://3.136.83.24:1994/companyusers", {
+    // fetch("http://localhost:1994/companyusers", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -19,10 +29,14 @@ function App({ ...props }) {
         return res.json();
       })
       .then(() => {
-        // alert(JSON.stringify(data));
+        setCreatingUser(false);
         props.history.push("home");
       })
-      .catch(e=>console.log(e))
+      .catch((e) => {
+        NotificationManager.error("Operation failed");
+
+        setCreatingUser(false);
+      });
   };
 
   return (
@@ -40,7 +54,11 @@ function App({ ...props }) {
             <div class="col-md-12">
               <div class="form_controlls_area">
                 {uploadLogo !== "" ? (
-                  <img for="upload_pic" src={`${uploadLogo}`} class="logo-img" />
+                  <img
+                    for="upload_pic"
+                    src={`${uploadLogo}`}
+                    class="logo-img"
+                  />
                 ) : (
                   <div class="form-group text-center">
                     <label for="upload_pic" class="upload_pic">
@@ -57,18 +75,36 @@ function App({ ...props }) {
                   </div>
                 )}
                 <div class="next_btn_area">
-                  <button class="btn next_btn" onClick={() => add()}>
-                    NEXT
+                  <button class="btn next_btn" disabled={creatingUser?true:false} onClick={() => createUser()}>
+                    {creatingUser ? (
+                      <Loader
+                        type="Circles"
+                        color="white"
+                        height={20}
+                        width={20}
+                      />
+                    ) : (
+                      "Next"
+                    )}
                   </button>
                 </div>
                 <div class="skip_btn_area">
-                  <button class="btn skip_btn">Skip</button>
+                  <button
+                    onClick={() => props.history.goBack()}
+                    class="btn skip_btn"
+                  >
+                    Skip
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div style={{ marginTop: "5%" }}>
+        <NotificationContainer />
+      </div>
+
     </div>
   );
 }
