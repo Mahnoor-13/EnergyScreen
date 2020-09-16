@@ -12,23 +12,26 @@ const App = ({ ...props }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const signupLocaion = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (password === confirmPassword) {
-
-        props.history.push("signuplocation", {
-          details: {
-            companyname: compnayName,
-            companyEmailAddress: companyEmailAddress,
-            password: password,
-          },
-        });
+      props.history.push("signuplocation", {
+        details: {
+          companyname: compnayName,
+          companyEmailAddress: companyEmailAddress,
+          password: password,
+        },
+      });
     } else {
       NotificationManager.error("Password not matched");
     }
   };
   return (
     // <UserProvider>
-    <div className="App" style={{backgroundColor:"white"}} style={{height:"100vh", overflow:"hidden"}}>
+    <div
+      className="App"
+      // style={{ backgroundColor: "white" }}
+      style={{ height: "100vh", overflow: "hidden" }}
+    >
       <section class="company_sign_area">
         <div class="sign_header">
           <div class="container">
@@ -62,10 +65,10 @@ const App = ({ ...props }) => {
           </div>
         </div>
 
-        <div class="sign_box" style={{marginTop:"36px"}}>
+        <div class="sign_box" style={{ marginTop: "36px" }}>
           <div class="sign_box_content">
             <div class="sign_box_title">
-              <h2 style={{fontWeight:"600"}}>Create Account</h2>
+              <h2 style={{ fontWeight: "600" }}>Create Account</h2>
             </div>
             <form onSubmit={(e) => signupLocaion(e)}>
               <div class="sign_form_area">
@@ -78,7 +81,7 @@ const App = ({ ...props }) => {
                       />
                     </span>
                     <input
-                    required
+                      required
                       type="text"
                       class="form-control"
                       placeholder="Company Name"
@@ -93,7 +96,7 @@ const App = ({ ...props }) => {
                       />
                     </span>
                     <input
-                    required
+                      required
                       type="email"
                       class="form-control"
                       placeholder="Email Address"
@@ -108,7 +111,7 @@ const App = ({ ...props }) => {
                       />
                     </span>
                     <input
-                    required
+                      required
                       type="password"
                       class="form-control"
                       placeholder="Password"
@@ -123,7 +126,7 @@ const App = ({ ...props }) => {
                       />
                     </span>
                     <input
-                    required
+                      required
                       type="password"
                       class="form-control"
                       placeholder="Confirm Password"

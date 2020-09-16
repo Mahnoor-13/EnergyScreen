@@ -6,6 +6,8 @@ import {
   NotificationManager,
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
+import * as firebase from "firebase";
+import uuid from "uuid";
 
 function App({ ...props }) {
   const [_props] = useState(props.location.state);
@@ -16,8 +18,8 @@ function App({ ...props }) {
     let _subProps = _props;
     _subProps.uploadLogo = uploadLogo;
     setCreatingUser(true);
-    fetch("http://3.136.83.24:1994/companyusers", {
-    // fetch("http://localhost:1994/companyusers", {
+    // fetch("http://3.136.83.24:1994/companyusers", {
+    fetch("http://localhost:1994/companyusers", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -30,17 +32,44 @@ function App({ ...props }) {
       })
       .then(() => {
         setCreatingUser(false);
+        localStorage.setItem("email", _subProps.details.companyEmailAddress);
         props.history.push("home");
       })
       .catch((e) => {
         NotificationManager.error("Operation failed");
-
+        console.log("e", e);
         setCreatingUser(false);
       });
   };
 
+  const uploadImageAsync = async (uri) => {
+    const blob = await new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        resolve(xhr.response);
+      };
+      xhr.onerror = function (e) {
+        reject(new TypeError("Network request failed"));
+      };
+      xhr.responseType = "blob";
+      xhr.open("GET", uri, true);
+      xhr.send(null);
+    });
+
+    const ref = firebase.storage().ref().child(uuid.v4());
+    const snapshot = await ref.put(blob);
+
+    // We're done with the blob, close and release it
+    // blob.close();
+    // this.setState({imageIndex: this.state.imageIndex + 1});
+    // this.setState({isLoading: false});
+    let getDownloadURL = await snapshot.ref.getDownloadURL();
+    setUploadLogo(getDownloadURL);
+    return getDownloadURL;
+  };
+
   return (
-    <div className="App" style={{backgroundColor:"white"}}>
+    <div className="App" style={{ backgroundColor: "white" }}>
       <section class="signUpIn_witget_area">
         <div class="container">
           <div class="signUpIn_title">
@@ -70,12 +99,19 @@ function App({ ...props }) {
                       id="upload_pic"
                       onChange={(e) => {
                         setUploadLogo(URL.createObjectURL(e.target.files[0]));
+                        uploadImageAsync(
+                          URL.createObjectURL(e.target.files[0])
+                        );
                       }}
                     />
                   </div>
                 )}
                 <div class="next_btn_area">
-                  <button class="btn next_btn" disabled={creatingUser?true:false} onClick={() => createUser()}>
+                  <button
+                    class="btn next_btn"
+                    disabled={creatingUser ? true : false}
+                    onClick={() => createUser()}
+                  >
                     {creatingUser ? (
                       <Loader
                         type="Circles"
@@ -104,7 +140,6 @@ function App({ ...props }) {
       <div style={{ marginTop: "5%" }}>
         <NotificationContainer />
       </div>
-
     </div>
   );
 }

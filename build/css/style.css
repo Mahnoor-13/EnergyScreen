@@ -1006,6 +1006,20 @@ a:hover, a:focus{
 	cursor: pointer;
 	transition: 0.3s;
 }
+.upload_pic-dashboard{
+	width: 71px;
+	height: 71px;
+	border-radius: 8px;
+	border: solid 1px #c9c9c9;
+	font-size: 14px;
+	line-height: 23px;
+	text-align: center;
+	color: #c9c9c9;
+	padding: 12px 0px;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: 0.3s;
+}
 .upload_pic:hover{
 	background: #4D4D4D;
 	transition: 0.3s;

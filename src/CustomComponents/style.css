@@ -107,7 +107,7 @@ a:focus {
   border: none;
   height: 68px;
   padding: 10px 20px 10px 51px;
-  background: url("../../assets/icons/search.svg") left 15px center no-repeat;
+  background: url("../assets/icons/search.svg") left 15px center no-repeat;
   border-radius: 0px;
 }
 .eg_desktop_search input:focus {
@@ -359,7 +359,7 @@ a:focus {
   box-shadow: 0px 0px 0px #fff;
 }
 .info_list ul li:hover h5 {
-  background: url("../../assets/icons/edit.svg") top 5px right no-repeat;
+  background: url("../assets/icons/edit.svg") top 5px right no-repeat;
 }
 .eg_about_us_area {
   padding: 24px;
@@ -377,7 +377,7 @@ a:focus {
   padding-top: 8px;
 }
 .eg_about_us_area:hover h4 {
-  background: url("../../assets/icons/edit.svg") top right no-repeat;
+  background: url("../assets/icons/edit.svg") top right no-repeat;
 }
 .eg_nav_tab {
 }
@@ -750,7 +750,7 @@ input:checked + .slider:before {
 .billing_form_controlls input.input_with_visa {
   font-size: 14px;
   font-style: italic;
-  background: url("../../assets/icons/visa.svg") right 18px center no-repeat;
+  background: url("../assets/icons/visa.svg") right 18px center no-repeat;
   padding-right: 68px;
 }
 .billing_form_controlls input.input_with_italic_txt {
