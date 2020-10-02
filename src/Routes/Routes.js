@@ -11,6 +11,8 @@ import SignupOnlinePresence from "../Components/SignupOnlinePresence/SignupOnlin
 import SignupUploadLogo from "../Components/SignupUploadLogo/SignupUploadLogo";
 import { UserProvider } from "../Context/Context";
 
+import FreelancerProfile from '../Components/FreelancerProfile/FreelancerProfile'
+
 export default function App() {
   return (
     <Router>
@@ -56,6 +58,16 @@ export default function App() {
           path="/home"
           render={(props) => <MainDashboard {...props} />}
         />
+
+
+
+        <Route
+          exact
+          path="/freelancerprofile"
+          render={(props) => <FreelancerProfile {...props} />}
+        />
+        
+        
         <Route
           exact
           path="/login"
