@@ -618,14 +618,20 @@ export const FreelancerProfile = () => {
                                     src={require("../../assets/icons/clock.svg")}
                                     alt="img"
                                   />
-                                  <span className="name_experience"> Exp 3 years</span>
+                                  <span className="name_experience">
+                                    {" "}
+                                    Exp 3 years
+                                  </span>
                                 </li>
                                 <li>
                                   <img
                                     src={require("../../assets/icons/usd.svg")}
                                     alt="img"
                                   />
-                                  <span className="name_experience"> $75.00/Hr</span>
+                                  <span className="name_experience">
+                                    {" "}
+                                    $75.00/Hr
+                                  </span>
                                 </li>
                               </div>
                             </div>
@@ -697,71 +703,224 @@ export const FreelancerProfile = () => {
                           </div>
                           <div className="border"></div>
 
-                          <div className="general-display">
-                            <div>
-                              <p>General</p>
+                          {/*   <ul class="nav nav2 ">
+                            <li class="active">
+                              <p
+                                href="#home"
+                                data-toggle="tab"
+                                className="general-color font_cursor"
+                              >
+                                General
+                              </p>
                               <div className="general"></div>
+                            </li>
+                            <li>
+                              <p
+                                data-toggle="tab"
+                                href="#menu1"
+                                className="font_color font_color2 font_cursor"
+                              >
+                                Education
+                              </p>
+                            </li>
+                            <li>
+                              <p
+                                data-toggle="tab"
+                                href="#menu2"
+                                className="font_color font_color2 font_cursor"
+                              >
+                                Experience
+                              </p>
+                            </li>
+
+                            <li>
+                              <p
+                                data-toggle="tab"
+                                href="#menu3"
+                                className="font_color font_color2 font_cursor"
+                              >
+                                Rating
+                              </p>
+                            </li>
+                          </ul>
+  */}
+
+                          <nav>
+                            <div class="nav" id="nav-tab" role="tablist">
+                              <p
+                                class="nav-item nav-link active font_color"
+                                id="nav-home-tab"
+                                data-toggle="tab"
+                                href="#nav-home"
+                                role="tab"
+                                aria-controls="nav-home"
+                                aria-selected="true"
+                              >
+                               General
+                              </p>
+                              <p
+                                class="nav-item nav-link font_color"
+                                id="nav-profile-tab"
+                                data-toggle="tab"
+                                href="#nav-profile"
+                                role="tab"
+                                aria-controls="nav-profile"
+                                aria-selected="false"
+                              >
+                                Education
+                              </p>
+                              <p
+                                class="nav-item nav-link font_color"
+                                id="nav-contact-tab"
+                                data-toggle="tab"
+                                href="#nav-contact"
+                                role="tab"
+                                aria-controls="nav-contact"
+                                aria-selected="false"
+                              >
+                               Experience
+                              </p>
+
+                              <p
+                              class="nav-item nav-link font_color"
+                              id="nav-contact-tab"
+                              data-toggle="tab"
+                              href="#nav-contact"
+                              role="tab"
+                              aria-controls="nav-contact"
+                              aria-selected="false"
+                            >
+                              Ratings
+                            </p>
                             </div>
-                            <p className="font_color">Education</p>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade show active"
+                              id="nav-home"
+                              role="tabpanel"
+                              aria-labelledby="nav-home-tab"
+                            >
+                            <div className="border"></div>
 
-                            <p className="font_color">Experience</p>
+                            <div className="freelance_summary_modal">
+                              <div class="container">
+                                <div class="row justify-content-md-center">
+                                  <div class="col-4 summary summary-color">
+                                    Summary
+                                  </div>
 
-                            <p className="font_color">Ratings</p>
-                          </div>
-                          <div className="border"></div>
+                                  <div class="col-8 summary">
+                                    I provide lean, strategy and agile
+                                    consulting services.
+                                  </div>
 
-                          <div className="freelance_summary_modal">
+                                  <div class="col-4 summary summary-color">
+                                    Skills
+                                  </div>
+
+                                  <div class="col-8 summary">
+                                    C++, JAva ,Ruby on Rails, Programming
+                                    frameworks, Another skill
+                                  </div>
+
+                                  <div class="col-4 summary summary-color">
+                                    Language
+                                  </div>
+
+                                  <div class="col-8 summary">
+                                    <p className="english">- English</p>
+                                    <p className="english">- French</p>
+                                    <p className="english">- German</p>
+                                  </div>
+
+                                  <div class="col-4 summary summary-color">
+                                    Achievement
+                                  </div>
+
+                                  <div class="col-8 summary">
+                                    <p className="english">
+                                      - Name of achievement
+                                    </p>
+                                    <p className="english">
+                                      - Name of achievement
+                                    </p>
+                                  </div>
+
+                                  <div class="col-4 summary summary-color">
+                                    <p>Publications & </p>
+                                    <p>Patterns</p>
+                                  </div>
+                                  <div className="col-8 summary"></div>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="nav-profile"
+                              role="tabpanel"
+                              aria-labelledby="nav-profile-tab"
+                            >
+                            <div className="border"></div>
+                            <div className="freelance_summary_modal">
                             <div class="container">
                               <div class="row justify-content-md-center">
                                 <div class="col-4 summary summary-color">
-                                  Summary
+                                  <p>Certification & </p>
+                                  <p>Licences</p>
                                 </div>
-
-                                <div class="col-8 summary">
-                                  I provide lean, strategy and agile consulting
-                                  services.
-                                </div>
-
-                                <div class="col-4 summary summary-color">
-                                  Skills
-                                </div>
-
-                                <div class="col-8 summary">
-                                  C++, JAva ,Ruby on Rails, Programming
-                                  frameworks, Another skill
-                                </div>
-
-                                <div class="col-4 summary summary-color">
-                                  Language
-                                </div>
-
-                                <div class="col-8 summary">
-                                  <p className="english">- English</p>
-                                  <p className="english">- French</p>
-                                  <p className="english">- German</p>
-                                </div>
-
-                                <div class="col-4 summary summary-color">
-                                  Achievement
-                                </div>
-
                                 <div class="col-8 summary">
                                   <p className="english">
-                                    - Name of achievement
+                                    - Lean Six Sigma Belt
                                   </p>
                                   <p className="english">
-                                    - Name of achievement
+                                    - Scrum Alliance Certified Scrum Master
+                                  </p>
+                                </div>
+                                <div class="col-4 summary summary-color">
+                                  School
+                                </div>
+                                <div className="col-8 summary ">
+                                  <p className="school_name">
+                                    Name of the School (2003 - 2004)
+                                  </p>
+                                  <p className="name">
+                                    Name of the specialy Studied
+                                  </p>
+
+                                  <p className="school_name2">
+                                    Name of the School (2003 - 2004)
+                                  </p>
+                                  <p className="name">
+                                    Name of the specialy Studied
+                                  </p>
+
+                                  <p className="school_name2">
+                                    Name of the School (2003 - 2004)
+                                  </p>
+                                  <p className="name">
+                                    Name of the specialy Studied
                                   </p>
                                 </div>
 
-                                <div class="col-4 summary summary-color">
-                                  <p>Publications & </p>
-                                  <p>Patterns</p>
-                                </div>
                                 <div className="col-8 summary"></div>
                               </div>
                             </div>
                           </div>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="nav-contact"
+                              role="tabpanel"
+                              aria-labelledby="nav-contact-tab"
+                            >
+                              ...
+                            </div>
+                          </div>
+
+
+                       
                         </div>
                       </div>
                     </div>

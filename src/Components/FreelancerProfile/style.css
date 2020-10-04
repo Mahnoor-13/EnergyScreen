@@ -1397,8 +1397,20 @@ input:checked + .slider:before {
   width: 9%;
   margin-top: 2%;
 }
+
+.education {
+  border-bottom: 4px solid #ffc718;
+  position: absolute;
+  top: w;
+  width: 12%;
+  margin-top: 4%;
+  left: 19%;
+}
 .font_color {
   color: #909090;
+}
+.font_cursor {
+  cursor: pointer;
 }
 .freelance_summary_modal {
   display: flex;
@@ -1438,11 +1450,37 @@ input:checked + .slider:before {
 .name_experience {
   margin-left: 10%;
 }
-@media(max-width: 990px) {
+@media (max-width: 990px) {
   .freelancer_user_box_modal {
     width: 100%;
     position: relative;
     padding-right: 0px;
     background: #fff;
+  }
 }
+
+.school_name {
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+.school_name2 {
+  margin-top: 5%;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+.name {
+  margin-top: 2%;
+}
+.nav2 {
+  margin: 2%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 55%;
+}
+
+.nav-link.active {
+  color: #4d4d4d;
+  background-color: #fff;
+  border-bottom: 4px solid #ffc718 !important;
 }
