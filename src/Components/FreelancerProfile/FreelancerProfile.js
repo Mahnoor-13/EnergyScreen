@@ -749,178 +749,550 @@ export const FreelancerProfile = () => {
                             <div class="nav" id="nav-tab" role="tablist">
                               <p
                                 class="nav-item nav-link active font_color"
-                                id="nav-home-tab"
+                                id="general-tab"
                                 data-toggle="tab"
-                                href="#nav-home"
+                                href="#general"
                                 role="tab"
-                                aria-controls="nav-home"
+                                aria-controls="general"
                                 aria-selected="true"
                               >
-                               General
+                                General
                               </p>
                               <p
                                 class="nav-item nav-link font_color"
-                                id="nav-profile-tab"
+                                id="education-tab"
                                 data-toggle="tab"
-                                href="#nav-profile"
+                                href="#education"
                                 role="tab"
-                                aria-controls="nav-profile"
+                                aria-controls="education"
                                 aria-selected="false"
                               >
                                 Education
                               </p>
                               <p
                                 class="nav-item nav-link font_color"
-                                id="nav-contact-tab"
+                                id="experience-tab"
                                 data-toggle="tab"
-                                href="#nav-contact"
+                                href="#experience"
                                 role="tab"
-                                aria-controls="nav-contact"
+                                aria-controls="experience"
                                 aria-selected="false"
                               >
-                               Experience
+                                Experience
                               </p>
 
                               <p
-                              class="nav-item nav-link font_color"
-                              id="nav-contact-tab"
-                              data-toggle="tab"
-                              href="#nav-contact"
-                              role="tab"
-                              aria-controls="nav-contact"
-                              aria-selected="false"
-                            >
-                              Ratings
-                            </p>
+                                class="nav-item nav-link font_color"
+                                id="ratings-tab"
+                                data-toggle="tab"
+                                href="#ratings"
+                                role="tab"
+                                aria-controls="ratings"
+                                aria-selected="false"
+                              >
+                                Ratings
+                              </p>
                             </div>
                           </nav>
                           <div class="tab-content" id="nav-tabContent">
                             <div
                               class="tab-pane fade show active"
-                              id="nav-home"
+                              id="general"
                               role="tabpanel"
-                              aria-labelledby="nav-home-tab"
+                              aria-labelledby="general-tab"
                             >
-                            <div className="border"></div>
+                              <div className="border"></div>
 
-                            <div className="freelance_summary_modal">
-                              <div class="container">
-                                <div class="row justify-content-md-center">
-                                  <div class="col-4 summary summary-color">
-                                    Summary
-                                  </div>
+                              <div className="freelance_summary_modal">
+                                <div class="container">
+                                  <div class="row justify-content-md-center">
+                                    <div class="col-4 summary summary-color">
+                                      Summary
+                                    </div>
 
-                                  <div class="col-8 summary">
-                                    I provide lean, strategy and agile
-                                    consulting services.
-                                  </div>
+                                    <div class="col-8 summary">
+                                      I provide lean, strategy and agile
+                                      consulting services.
+                                    </div>
 
-                                  <div class="col-4 summary summary-color">
-                                    Skills
-                                  </div>
+                                    <div class="col-4 summary summary-color">
+                                      Skills
+                                    </div>
 
-                                  <div class="col-8 summary">
-                                    C++, JAva ,Ruby on Rails, Programming
-                                    frameworks, Another skill
-                                  </div>
+                                    <div class="col-8 summary">
+                                      C++, JAva ,Ruby on Rails, Programming
+                                      frameworks, Another skill
+                                    </div>
 
-                                  <div class="col-4 summary summary-color">
-                                    Language
-                                  </div>
+                                    <div class="col-4 summary summary-color">
+                                      Language
+                                    </div>
 
-                                  <div class="col-8 summary">
-                                    <p className="english">- English</p>
-                                    <p className="english">- French</p>
-                                    <p className="english">- German</p>
-                                  </div>
+                                    <div class="col-8 summary">
+                                      <p className="english">- English</p>
+                                      <p className="english">- French</p>
+                                      <p className="english">- German</p>
+                                    </div>
 
-                                  <div class="col-4 summary summary-color">
-                                    Achievement
-                                  </div>
+                                    <div class="col-4 summary summary-color">
+                                      Achievement
+                                    </div>
 
-                                  <div class="col-8 summary">
-                                    <p className="english">
-                                      - Name of achievement
-                                    </p>
-                                    <p className="english">
-                                      - Name of achievement
-                                    </p>
-                                  </div>
+                                    <div class="col-8 summary">
+                                      <p className="english">
+                                        - Name of achievement
+                                      </p>
+                                      <p className="english">
+                                        - Name of achievement
+                                      </p>
+                                    </div>
 
-                                  <div class="col-4 summary summary-color">
-                                    <p>Publications & </p>
-                                    <p>Patterns</p>
+                                    <div class="col-4 summary summary-color">
+                                      <p>Publications & </p>
+                                      <p>Patterns</p>
+                                    </div>
+                                    <div className="col-8 summary"></div>
                                   </div>
-                                  <div className="col-8 summary"></div>
                                 </div>
                               </div>
                             </div>
-                            </div>
                             <div
                               class="tab-pane fade"
-                              id="nav-profile"
+                              id="education"
                               role="tabpanel"
-                              aria-labelledby="nav-profile-tab"
+                              aria-labelledby="education-tab"
                             >
-                            <div className="border"></div>
-                            <div className="freelance_summary_modal">
-                            <div class="container">
-                              <div class="row justify-content-md-center">
-                                <div class="col-4 summary summary-color">
-                                  <p>Certification & </p>
-                                  <p>Licences</p>
-                                </div>
-                                <div class="col-8 summary">
-                                  <p className="english">
-                                    - Lean Six Sigma Belt
-                                  </p>
-                                  <p className="english">
-                                    - Scrum Alliance Certified Scrum Master
-                                  </p>
-                                </div>
-                                <div class="col-4 summary summary-color">
-                                  School
-                                </div>
-                                <div className="col-8 summary ">
-                                  <p className="school_name">
-                                    Name of the School (2003 - 2004)
-                                  </p>
-                                  <p className="name">
-                                    Name of the specialy Studied
-                                  </p>
+                              <div className="border"></div>
+                              <div className="freelance_summary_modal">
+                                <div class="container">
+                                  <div class="row justify-content-md-center">
+                                    <div class="col-4 summary summary-color">
+                                      <p>Certification & </p>
+                                      <p>Licences</p>
+                                    </div>
+                                    <div class="col-8 summary">
+                                      <p className="english">
+                                        - Lean Six Sigma Belt
+                                      </p>
+                                      <p className="english">
+                                        - Scrum Alliance Certified Scrum Master
+                                      </p>
+                                    </div>
+                                    <div class="col-4 summary summary-color">
+                                      School
+                                    </div>
+                                    <div className="col-8 summary ">
+                                      <p className="school_name">
+                                        Name of the School (2003 - 2004)
+                                      </p>
+                                      <p className="name">
+                                        Name of the specialy Studied
+                                      </p>
 
-                                  <p className="school_name2">
-                                    Name of the School (2003 - 2004)
-                                  </p>
-                                  <p className="name">
-                                    Name of the specialy Studied
-                                  </p>
+                                      <p className="school_name2">
+                                        Name of the School (2003 - 2004)
+                                      </p>
+                                      <p className="name">
+                                        Name of the specialy Studied
+                                      </p>
 
-                                  <p className="school_name2">
-                                    Name of the School (2003 - 2004)
-                                  </p>
-                                  <p className="name">
-                                    Name of the specialy Studied
-                                  </p>
+                                      <p className="school_name2">
+                                        Name of the School (2003 - 2004)
+                                      </p>
+                                      <p className="name">
+                                        Name of the specialy Studied
+                                      </p>
+                                    </div>
+
+                                  </div>
                                 </div>
-
-                                <div className="col-8 summary"></div>
                               </div>
                             </div>
-                          </div>
-                            </div>
                             <div
                               class="tab-pane fade"
-                              id="nav-contact"
+                              id="experience"
                               role="tabpanel"
                               aria-labelledby="nav-contact-tab"
                             >
-                              ...
+                              <div className="border"></div>
+                              <div className="freelance_summary_modal">
+                                <div class="container">
+                                  <div class="row justify-content-md-center">
+                                    {/* <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+                                      
+                                      <div>
+                                        <img
+                                          src={require("../../assets/img-1.png")}
+                                          alt="img"
+                                          className="modal_experience_pic"
+                                        />
+                                        <span className="english">
+                                          Name of the company
+                                        </span>
+                                        </div>
+                                        <p>Skill</p>
+                            
+                                 
+                                    </div>*/}
+
+                                    <div class="col-4 summary summary-color summary_display">
+                                      <a href="#">
+                                        <img
+                                          src={require("../../assets/EG.svg")}
+                                        />
+                                      </a>
+
+                                      <p className="experience_date">
+                                        Jan 2018{" "}
+                                      </p>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div className="img-modal-div">
+                                        <img
+                                          src={require("../../assets/img-1.png")}
+                                          alt="img"
+                                          className="modal_experience_pic"
+                                        />
+                                        <span className="english">
+                                          Name of the company
+                                        </span>
+                                      </div>
+                                      <p className="skill-color">
+                                        Skill 1, Skill 2, Skill 3
+                                      </p>
+                                    </div>
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <ul className="ul-experience">
+                                        <li>
+                                          <p className="experience_para">
+                                            Solution CoLorem ipsum dolor sit
+                                            amet, consectetur adipiscing elit,
+                                            sed do eiusmod incididunt ut labore
+                                            et dolore magna aliqua.
+                                          </p>
+                                        </li>
+                                      </ul>
+
+                                      <ul className="ul-experience">
+                                        <li>
+                                          <p className="experience_para">
+                                            Sed do eiusmod incididunt ut labore
+                                            et dolore magna aliqua.
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+
+                                    <div className="col-4"></div>
+                                    <div className="col-8 ">
+                                      <div className="rating_star-div">
+                                        <div>
+                                          <span className="rating-experience">
+                                            Rating
+                                          </span>
+                                          <span class="user_ratting stars_experience">
+                                            <i class="fas fa-star star-color"></i>
+                                            <i class="fas fa-star star-color"></i>
+                                            <i class="fas fa-star star-color"></i>
+                                            <i class="fas fa-star star-color"></i>
+                                            <i class="far fa-star star-color"></i>
+                                          </span>
+
+                                          <ul>
+                                            <li>
+                                              <p className="experience_para">
+                                                Solution CoLorem ipsum dolor sit
+                                                amet, consectetur adipiscing
+                                                elit, sed do eiusmod incididunt
+                                                ut labore et dolore magna
+                                                aliqua.
+                                              </p>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-4 summary summary-color summary_display">
+                                      <p className="experience_date">
+                                        Jan 2018{" "}
+                                      </p>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div className="img-modal-div">
+                                        <span className="english">
+                                          Name of the company
+                                        </span>
+                                      </div>
+                                      <p className="skill-color">
+                                        Skill 1, Skill 2, Skill 3
+                                      </p>
+                                    </div>
+
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <ul className="ul-experience">
+                                        <li>
+                                          <p className="experience_para">
+                                            Solution CoLorem ipsum dolor sit
+                                            amet, consectetur adipiscing elit,
+                                            sed do eiusmod incididunt ut labore
+                                            et dolore magna aliqua.
+                                          </p>
+                                        </li>
+                                      </ul>
+
+                                      <ul className="ul-experience">
+                                        <li>
+                                          <p className="experience_para">
+                                            Sed do eiusmod incididunt ut labore
+                                            et dolore magna aliqua.
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+
+                                    <div class="col-4 summary summary-color summary_display">
+                                      <a href="#">
+                                        <img
+                                          src={require("../../assets/EG.svg")}
+                                        />
+                                      </a>
+
+                                      <p className="experience_date">
+                                        Jan 2018{" "}
+                                      </p>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div className="img-modal-div">
+                                        <img
+                                          src={require("../../assets/img-1.png")}
+                                          alt="img"
+                                          className="modal_experience_pic"
+                                        />
+                                        <span className="english">
+                                          Name of the company
+                                        </span>
+                                      </div>
+                                      <p className="skill-color">
+                                        Skill 1, Skill 2, Skill 3
+                                      </p>
+                                    </div>
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <ul className="ul-experience">
+                                        <li>
+                                          <p className="experience_para">
+                                            Sed do eiusmod incididunt ut labore
+                                            et dolore magna aliqua.
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="tab-pane fade"
+                              id="ratings"
+                              role="tabpanel"
+                              aria-labelledby="nav-contact-tab"
+                            >
+                              <div className="border"></div>
+                              <div className="freelance_summary_modal">
+                                <div class="container">
+                                  <div class="row justify-content-md-center">
+                                    <div class="col-4 summary summary-color ">
+                                      <div className="img-modal-div">
+                                        <img
+                                          src={require("../../assets/EG.svg")}
+                                        />
+                                        <span className="english-rating">
+                                          Name of the company
+                                        </span>
+                                        <p className="experience_date_rating">
+                                          Jan 2018{" "}
+                                        </p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div class="stars_rating">
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="far fa-star star-color"></i>
+                                      </div>
+                                    </div>
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <p className="rating_para">
+                                        " Solution CoLorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do
+                                        eiusmod incididunt ut labore et dolore
+                                        magna aliqua. "
+                                      </p>
+
+                                    
+                                    </div>
+
+
+
+                                    <div class="col-4 summary summary-color ">
+                                      <div className="img-modal-div">
+                                        <img
+                                          src={require("../../assets/EG.svg")}
+                                        />
+                                        <span className="english-rating">
+                                          Name of the company
+                                        </span>
+                                        <p className="experience_date_rating">
+                                          Jan 2018{" "}
+                                        </p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div class="stars_rating">
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="far fa-star star-color"></i>
+                                      </div>
+                                    </div>
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <p className="rating_para">
+                                        " Solution CoLorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do
+                                        eiusmod incididunt ut labore et dolore
+                                        magna aliqua. "
+                                      </p>
+
+                                    
+                                    </div>
+
+
+
+
+
+                                    <div class="col-4 summary summary-color ">
+                                      <div className="img-modal-div">
+                                        <img
+                                          src={require("../../assets/EG.svg")}
+                                        />
+                                        <span className="english-rating">
+                                          Name of the company
+                                        </span>
+                                        <p className="experience_date_rating">
+                                          Jan 2018{" "}
+                                        </p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div class="stars_rating">
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="far fa-star star-color"></i>
+                                      </div>
+                                    </div>
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <p className="rating_para">
+                                        " Solution CoLorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do
+                                        eiusmod incididunt ut labore et dolore
+                                        magna aliqua. "
+                                      </p>
+
+                                    
+                                    </div>
+
+
+
+                                    <div class="col-4 summary summary-color ">
+                                      <div className="img-modal-div">
+                                        <img
+                                          src={require("../../assets/EG.svg")}
+                                        />
+                                        <span className="english-rating">
+                                          Name of the company
+                                        </span>
+                                        <p className="experience_date_rating">
+                                          Jan 2018{" "}
+                                        </p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-8 summary">
+                                      <p className="solution_heading">
+                                        Solution Consulting Business Analyst
+                                      </p>
+
+                                      <div class="stars_rating">
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="far fa-star star-color"></i>
+                                      </div>
+                                    </div>
+                                    <div className="col-3"></div>
+                                    <div className="col-8">
+                                      <p className="rating_para">
+                                        " Solution CoLorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do
+                                        eiusmod incididunt ut labore et dolore
+                                        magna aliqua. "
+                                      </p>
+
+                                    
+                                    </div>
+
+
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-
-
-                       
                         </div>
                       </div>
                     </div>

@@ -727,8 +727,11 @@ input:checked + .slider:before {
   border-radius: 4px;
   box-shadow: 0 2px 24px 0 rgba(10, 43, 64, 0.5);
   background-color: #4d4d4d;
-  overflow: hidden;
+  overflow-x: hidden;
   margin-top: 10px;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .select-hide {
   display: none;
@@ -1358,6 +1361,12 @@ input:checked + .slider:before {
 .modal-width {
   width: 50%;
   margin: 10px auto;
+  /* overflow: scroll; */
+  max-height: 113%;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  overflow-x: hidden;
+  height: 89%;
 }
 
 .user_rate_details_modal li {
@@ -1408,6 +1417,7 @@ input:checked + .slider:before {
 }
 .font_color {
   color: #909090;
+  cursor: pointer;
 }
 .font_cursor {
   cursor: pointer;
@@ -1419,6 +1429,9 @@ input:checked + .slider:before {
 }
 .summary {
   margin-top: 13%;
+}
+.summary_display {
+  display: flex;
 }
 .experience {
   margin-top: 3%;
@@ -1446,6 +1459,7 @@ input:checked + .slider:before {
 }
 .english {
   margin-top: 2%;
+  margin-left: 3%;
 }
 .name_experience {
   margin-left: 10%;
@@ -1483,4 +1497,82 @@ input:checked + .slider:before {
   color: #4d4d4d;
   background-color: #fff;
   border-bottom: 4px solid #ffc718 !important;
+}
+.experience_date {
+  margin: 5%;
+}
+.solution_heading {
+  font-weight: bold;
+  color: #4d4d4d;
+}
+.modal_experience_pic {
+  height: 50%;
+  width: 7%;
+  border: 3px solid #ffc718;
+  border-radius: 50%;
+}
+.img-modal-div {
+  margin-top: 2%;
+}
+.skill-color {
+  color: #ffc718;
+  margin-top: 2%;
+}
+.ul-experience {
+  margin-top: 7%;
+}
+.experience_para {
+  line-height: unset;
+}
+.star {
+  width: 12px;
+  height: 12px;
+  border: solid 1px #4d4d4d;
+  background-color: #4d4d4d;
+}
+.stars_experience {
+  margin-left: 8%;
+}
+.rating_star-div {
+  border: 1px solid rgba(255, 231, 0, 0.4);
+  opacity: 0.6;
+  background-color: rgba(255, 231, 0, 0.4);
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.rating-experience {
+  font-weight: bold;
+  color: #4d4d4d;
+}
+.star-color {
+  color: #ffab16;
+}
+.english-rating {
+  margin-left: 3%;
+  font-size: 0.9rem;
+  color: #909090;
+}
+.experience_date_rating {
+  margin-left: 21%;
+  width: 49px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  color: #a3d6d5;
+}
+.rating_para {
+  line-height: unset;
+  margin-left: 7%;
+  font-size: 0.9rem;
+}
+
+.stars_rating {
+  font-size: 12px;
+  color: #4d4d4d;
+  margin-top: 3%;
 }
